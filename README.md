@@ -19,6 +19,8 @@ Relevant links:
 
 
 # Suggestions
+I sent out an online query about things that people might like me to cover:
+
 * interested in a practical talk on using Sweave with R, both to be able to
   produce quality tables, and reports that can be updated with new data (ie,
   like monthly reports)
@@ -26,6 +28,25 @@ Relevant links:
   background won't be familiar with this.
 * From a practical perspective, knowing any issues to install either sweave or
   latex would be useful.
+* "I would like to know how to integrate LaTex and R or exporting R results for
+  writing reports or journal papers."
+* "I'd be interested in hearing of any experiences you've had with creating
+  reproducible presentations, as well as reports. I recently used the slidify
+  package (http://ramnathv.github.com/slidify/) and would like to learn
+  more."
+* "RStudio as an IDE sounds interesting"
+* "Text manipulation in R. Sed? Awk? Perl? Grep?"
+* "I would be interested in automate LaTex to web enabled form of reporting"
+* "How large a dataset can knitr deal with?"
+*  "I am interested in how to use R to automate marketing operations reports
+   including campaign reporting. Particularly if there is an ability to
+   integrate through to MS Office products for commentary and end reporting"
+* "Best way of producing reproducible and visually appealing slideshows."
+* "integration of Knitr with RStudio, so I'm interested in learning more about
+  that"
+
+
+
 
 
 
