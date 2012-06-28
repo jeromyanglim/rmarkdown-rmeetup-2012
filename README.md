@@ -1,9 +1,4 @@
-# Overview of talk
-* Discuss basics of learning LaTeX
-* Installation issues
-* What to do when you encounter troubles?
-
-## Talk title
+# Abstract of talk
 
 Simple Reproducible Analysis with knitr, R Markdown, and RStudio
 
