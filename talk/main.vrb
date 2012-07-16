@@ -1,0 +1,19 @@
+\frametitle {Replicating R Studio}
+
+\begin{verbatim}
+require(knitr) # required for knitting from rmd to md
+require(markdown) # required for md to html
+knit('test.rmd', 'test.md') # creates md
+markdownToHTML('test.md', 'test.html') # create html
+browseURL(paste('file://',
+    file.path(getwd(),'test.html'),
+    sep='')) # open file in browser
+\end{verbatim}
+
+see \texttt{?markdownHTMLOptions} for more options. E.g.,
+
+\begin{verbatim}
+markdownToHTML('test.md', 'test.html',
+    options='fragment_only')
+\end{verbatim}
+

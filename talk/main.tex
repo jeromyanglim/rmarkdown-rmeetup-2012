@@ -1,0 +1,34 @@
+\documentclass[t]{beamer}  
+\usetheme{Berkeley}                 
+\setbeamertemplate{navigation symbols}{}
+\title{Simple Reproducible Analysis with knitr, R Markdown, and RStudio}
+\subtitle{Melbourne R Users Group (melbURN)}
+\author{Jeromy Anglim}
+\institute{Melbourne Business School}
+\date{18th July 2012}
+
+% enables backticks in verbatim
+\makeatletter
+{\catcode`\`=13
+\xdef\@verbatim{\unexpanded\expandafter{\@verbatim}\chardef\noexpand`=18 }
+}
+\makeatother
+
+
+\begin{document}
+\begin{frame}
+\titlepage
+\begin{center}
+	\url{http://jeromyanglim.blogspot.com}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\input{"talk.tex"}
+
+\end{document}
+

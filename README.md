@@ -44,9 +44,24 @@ I sent out an online query about things that people might like me to cover:
 * "Best way of producing reproducible and visually appealing slideshows."
 * "integration of Knitr with RStudio, so I'm interested in learning more about
   that"
-
-
-
+* integrate LaTex and R or exporting R results for writing reports or journal papers.
+* I'm interested in how he uses RStudio & the applications of his reproducible
+research (how does it get published? does he publish the whole report with
+source? Share with his peers? Just remember it for later.
+* I would be interested in experience-based best practices for keeping analyses
+organised as well as reproducible. Any tips about streamlining the re-use of
+analyses with different data sets would be good too.
+* Latex
+* I'm interested in reproducible analysis because it seems to offer the ability
+to complete more experiments in less time. I'm most interested in the planning
+that goes into it and how you would still have the flexibility to follow
+results.
+* Macros
+* Any experience integrating with the new generation of javascript visualisation
+tools like d3?
+* workflow and good practice (e.g. spreading source code over multiple files vs
+single file) in using Srstudio and markdown as an IDE, also in integrating them
+with unit testing (e.g. Hadley Wickham's testthat package).
 
 
 

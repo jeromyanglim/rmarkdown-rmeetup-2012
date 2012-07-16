@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Markdown}{4}{0}{2}
+\beamer@sectionintoc {3}{knitr and R Markdown}{16}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{27}{0}{4}
