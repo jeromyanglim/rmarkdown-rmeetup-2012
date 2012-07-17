@@ -33,6 +33,74 @@
 
 \end{frame}
 
+\begin{frame}\frametitle{What is \emph{reproducible analysis}?}
+
+\begin{itemize}
+\item
+  Reproducibility varies on a continuum
+\item
+  I operationalise it as:
+
+  \begin{itemize}
+  \item
+    code transforms raw data and meta-data into processed data,
+  \item
+    code runs analyses on the data, and
+  \item
+    code incorporates analyses into a report
+  \end{itemize}
+\item
+  Ideally, the process has a one-click build
+\item
+  Public sharing of document, code, and data is optional, but forms part
+  of gold standard of scientific openness
+\item
+  Goes by many names, particularly ``reproducible research'', but I
+  prefer ``reproducible analysis''.
+\end{itemize}
+
+\tiny{
+See also: \url{http://stats.stackexchange.com/a/15006/183} 
+\url{https://github.com/jeromyanglim/rmarkdown-rmeetup-2012/issues/11}}
+
+\end{frame}
+
+\begin{frame}\frametitle{Aims of Reproducible}
+
+\begin{itemize}
+\item
+  Ability to reproduce analysis
+\item
+  Increase accuracy
+
+  \begin{itemize}
+  \item
+    Ability to verify analyses are consistent with intentions
+  \item
+    Ability to review analysis choices
+  \end{itemize}
+\item
+  Increase clarity of communication
+\item
+  Increased trustworthiness
+
+  \begin{itemize}
+  \item
+    Increased accuracy +
+  \item
+    Ability for others to verify
+  \end{itemize}
+\item
+  Extensibility
+
+  \begin{itemize}
+  \item
+    Ability to easily modify or re-use existing analyses
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
 \section{Markdown}
 
 \begin{frame}\frametitle{Overview of Markdown}
@@ -120,24 +188,85 @@
 
 \section{knitr and R Markdown}
 
-\begin{frame}\frametitle{Benefits of knitr}
-
-\end{frame}
-
-\begin{frame}\frametitle{Benefits of Rstudio}
+\begin{frame}[fragile]\frametitle{Benefits of knitr}
 
 \begin{itemize}
 \item
-  Open source
+  knitr supports many markups: LaTeX, Markdown, HTML, reStructuredText
 \item
-  Works on Linux, Mac, and Windows
+  knitr has really nice defaults
+\item
+  Simplified figure production
+
+  \begin{itemize}
+  \item
+    automatically print ggplot2 and lattice figures
+  \item
+    print figures by default
+  \item
+    permit interspersing of figures and console output
+  \end{itemize}
+\item
+  Greater extensibility:
+
+  \begin{itemize}
+  \item
+    output options
+  \item
+    supports languages other than R
+  \end{itemize}
+\item
+  Simplified caching
+\item
+  And more: \url{http://yihui.name/slides/2012-knitr-RStudio.html}
 \end{itemize}
 
-*
+\end{frame}
+
+\begin{frame}\frametitle{Rstudio}
+
+\begin{itemize}
+\item
+  Benefits of Rstudio as IDE for R
+
+  \begin{itemize}
+  \item
+    Open source
+  \item
+    Works on Linux, Mac, and Windows
+  \item
+    Many useful features
+  \item
+    It just works
+  \item
+    Tight integration with knitr
+  \end{itemize}
+\item
+  But many other options
+
+  \begin{itemize}
+  \item
+    Emacs with ESS
+  \item
+    Vim with R plugin
+  \item
+    Eclipse with StatET
+  \item
+    etc.
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{Rstudio screenshot}
+
+\includegraphics[width=3in]{figures/rstudio-screenshot.png}
 
 \end{frame}
 
 \begin{frame}\frametitle{R Code chunks}
+
+Global options:
 
 \end{frame}
 
@@ -162,6 +291,10 @@
 \item
   Markdown \texttt{4} 4 HTML 4 4
 \end{itemize}
+
+\end{frame}
+
+\begin{frame}\frametitle{Figures}
 
 \end{frame}
 
@@ -263,14 +396,47 @@ markdownToHTML('test.md', 'test.html',
 
 \end{frame}
 
-\section{Conclusion}
+\section{LaTeX}
 
-\begin{frame}\frametitle{asdf}
+\begin{frame}\frametitle{knitr with LaTeX}
+
+\begin{itemize}
+\item
+  Sexpr
+\item
+  Code chunk delimiters
+\end{itemize}
 
 \end{frame}
 
-\begin{frame}\frametitle{Asdf}
+\section{Conclusion}
 
-asdf
+\begin{frame}\frametitle{Final thoughts}
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Links}
+
+\begin{itemize}
+\item
+  knitr: \url{http://yihui.name/knitr/}
+\item
+  R Studio: \url{http://rstudio.org/}
+\item
+  R Markdown with R Studio:
+  \url{http://rstudio.org/docs/authoring/using_markdown}
+\item
+  Places to ask questions
+
+  \begin{itemize}
+  \item
+    R on StackOverflow:
+    \url{http://stackoverflow.com/questions/tagged/r}
+  \item
+    LaTeX: \url{http://tex.stackexchange.com/}
+  \item
+    knitr: \url{https://github.com/yihui/knitr/issues}
+  \end{itemize}
+\end{itemize}
 
 \end{frame}

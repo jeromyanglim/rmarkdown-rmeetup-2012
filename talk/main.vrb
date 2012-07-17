@@ -1,19 +1,24 @@
-\frametitle {Replicating R Studio}
+\frametitle {Links}
 
-\begin{verbatim}
-require(knitr) # required for knitting from rmd to md
-require(markdown) # required for md to html
-knit('test.rmd', 'test.md') # creates md
-markdownToHTML('test.md', 'test.html') # create html
-browseURL(paste('file://',
-    file.path(getwd(),'test.html'),
-    sep='')) # open file in browser
-\end{verbatim}
+\begin{itemize}
+\item
+  knitr: \url{http://yihui.name/knitr/}
+\item
+  R Studio: \url{http://rstudio.org/}
+\item
+  R Markdown with R Studio:
+  \url{http://rstudio.org/docs/authoring/using_markdown}
+\item
+  Places to ask questions
 
-see \texttt{?markdownHTMLOptions} for more options. E.g.,
-
-\begin{verbatim}
-markdownToHTML('test.md', 'test.html',
-    options='fragment_only')
-\end{verbatim}
+  \begin{itemize}
+  \item
+    R on StackOverflow:
+    \url{http://stackoverflow.com/questions/tagged/r}
+  \item
+    LaTeX: \url{http://tex.stackexchange.com/}
+  \item
+    knitr: \url{https://github.com/yihui/knitr/issues}
+  \end{itemize}
+\end{itemize}
 

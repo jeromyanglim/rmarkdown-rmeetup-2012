@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.14)  16 JUL 2012 14:31
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.10.14)  17 JUL 2012 17:26
 entering extended mode
  %&-line parsing enabled.
 **main.tex
@@ -837,81 +837,99 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 
 ] [4
 
-] <figures/headings.png, id=80, 745.78625pt x 228.855pt>
+] [5
+
+] [6
+
+]
+<figures/headings.png, id=115, 745.78625pt x 228.855pt>
 File: figures/headings.png Graphic file (type png)
 
-<use figures/headings.png> [5
+<use figures/headings.png> [7
 
  <./figures/headings.png (PNG copy)>]
-<figures/basic-formatting.png, id=90, 682.55pt x 121.45375pt>
+<figures/basic-formatting.png, id=128, 682.55pt x 121.45375pt>
 File: figures/basic-formatting.png Graphic file (type png)
 
-<use figures/basic-formatting.png> [6
+<use figures/basic-formatting.png> [8
 
- <./figures/basic-formatting.png (PNG copy)>] <figures/paragraphs.png, id=101, 
+ <./figures/basic-formatting.png (PNG copy)>] <figures/paragraphs.png, id=140, 
 805.0075pt x 271.0125pt>
 File: figures/paragraphs.png Graphic file (type png)
 
-<use figures/paragraphs.png> [7
+<use figures/paragraphs.png> [9
 
  <./figures/paragraphs.png (PNG copy)>]
-<figures/dot-points.png, id=113, 598.235pt x 415.5525pt>
+<figures/dot-points.png, id=152, 598.235pt x 415.5525pt>
 File: figures/dot-points.png Graphic file (type png)
 
-<use figures/dot-points.png> [8
+<use figures/dot-points.png> [10
 
  <./figures/dot-points.png (PNG copy)>]
-<figures/equations.png, id=124, 690.58pt x 217.81375pt>
+<figures/equations.png, id=164, 690.58pt x 217.81375pt>
 File: figures/equations.png Graphic file (type png)
 
-<use figures/equations.png> [9
+<use figures/equations.png> [11
 
  <./figures/equations.png (PNG copy)>]
-<figures/links.png, id=135, 674.52pt x 95.35625pt>
+<figures/links.png, id=176, 674.52pt x 95.35625pt>
 File: figures/links.png Graphic file (type png)
  <use figures/links.png>
-[10
-
- <./figures/links.png (PNG copy)>]
-<figures/images.png, id=146, 726.715pt x 202.7575pt>
-File: figures/images.png Graphic file (type png)
- <use figures/images.png>
-[11
-
- <./figures/images.png (PNG copy)>]
-<figures/code.png, id=157, 697.60625pt x 245.91875pt>
-File: figures/code.png Graphic file (type png)
- <use figures/code.png>
 [12
 
- <./figures/code.png (PNG copy)>]
-<figures/quote.png, id=168, 709.65125pt x 271.0125pt>
-File: figures/quote.png Graphic file (type png)
- <use figures/quote.png>
+ <./figures/links.png (PNG copy)>]
+<figures/images.png, id=188, 726.715pt x 202.7575pt>
+File: figures/images.png Graphic file (type png)
+ <use figures/images.png>
 [13
 
- <./figures/quote.png (PNG copy)>]
-<figures/tables.png, id=180, 703.62875pt x 317.185pt>
-File: figures/tables.png Graphic file (type png)
- <use figures/tables.png>
+ <./figures/images.png (PNG copy)>]
+<figures/code.png, id=201, 697.60625pt x 245.91875pt>
+File: figures/code.png Graphic file (type png)
+ <use figures/code.png>
 [14
 
- <./figures/tables.png (PNG copy)>]
-<figures/html.png, id=191, 706.64pt x 253.94875pt>
-File: figures/html.png Graphic file (type png)
- <use figures/html.png>
+ <./figures/code.png (PNG copy)>]
+<figures/quote.png, id=213, 709.65125pt x 271.0125pt>
+File: figures/quote.png Graphic file (type png)
+ <use figures/quote.png>
 [15
 
- <./figures/html.png (PNG copy)>] [16
+ <./figures/quote.png (PNG copy)>]
+<figures/tables.png, id=225, 703.62875pt x 317.185pt>
+File: figures/tables.png Graphic file (type png)
+ <use figures/tables.png>
+[16
 
-] [17
+ <./figures/tables.png (PNG copy)>]
+<figures/html.png, id=237, 706.64pt x 253.94875pt>
+File: figures/html.png Graphic file (type png)
+ <use figures/html.png>
+[17
 
-] [18
+ <./figures/html.png (PNG copy)>]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [18
+
+] [19
+
+]
+<figures/rstudio-screenshot.png, id=273, 1062.97125pt x 1064.97874pt>
+File: figures/rstudio-screenshot.png Graphic file (type png)
+
+<use figures/rstudio-screenshot.png>
+Overfull \vbox (2.49838pt too high) detected at line 265
+ []
+
+[20
+
+ <./figures/rstudio-screenshot.png (PNG copy)>] [21
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [19
+ (./main.vrb) [22
 
 ]
 \openout4 = `main.vrb'.
@@ -926,12 +944,14 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbackslash' on input line 5.
 
-) [20
+) [23
+
+] [24
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [21
+ (./main.vrb) [25
 
 ]
 \openout4 = `main.vrb'.
@@ -941,20 +961,20 @@ Overfull \hbox (2.44044pt too wide) in paragraph at lines 9--9
 []\OT1/cmtt/m/n/10.95 print(xtable(my_data_frame, caption = "My Caption",[] 
  []
 
-<figures/simple_table.png, id=263, 116.435pt x 155.58125pt>
+<figures/simple_table.png, id=342, 116.435pt x 155.58125pt>
 File: figures/simple_table.png Graphic file (type png)
 
-<use figures/simple_table.png>) [22
+<use figures/simple_table.png>) [26
 
  <./figures/simple_table.png (PNG copy)>]
-[23
+[27
 
 ]
 \openout4 = `main.vrb'.
 
- (./main.vrb) [24
+ (./main.vrb) [28
 
-] [25
+] [29
 
 ]
 \openout4 = `main.vrb'.
@@ -969,11 +989,16 @@ Overfull \hbox (8.18913pt too wide) in paragraph at lines 11--11
 []\OT1/cmtt/m/n/10.95 markdownToHTML('test.md', 'test.html') # create html[] 
  []
 
-) [26
+) [30
 
-] [27
+] [31
 
-] [28
+] [32
+
+]
+\openout4 = `main.vrb'.
+
+ (./main.vrb) [33
 
 ])
 \tf@nav=\write6
@@ -995,25 +1020,23 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 14851 strings out of 495061
- 278403 string characters out of 1182620
- 338508 words of memory out of 3000000
- 17549 multiletter control sequences out of 15000+50000
- 11374 words of font info for 43 fonts, out of 3000000 for 9000
+ 14900 strings out of 495061
+ 279003 string characters out of 1182620
+ 339508 words of memory out of 3000000
+ 17579 multiletter control sequences out of 15000+50000
+ 14958 words of font info for 57 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  49i,16n,57p,412b,536s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Navigation29} has been referenced but does not ex
-ist, replaced by a fixed one
-
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share
-/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmtt10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmtt12.pfb>
-Output written on main.pdf (28 pages, 589843 bytes).
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmssi12.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmtt10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on main.pdf (33 pages, 790217 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 480 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -13,6 +13,37 @@
     * document or presentation
     * audience: formal versus informal (e.g., self, collaborators)
 
+## What is *reproducible analysis*?
+* Reproducibility varies on a continuum
+* I operationalise it as: 
+    * code transforms raw data and meta-data into processed data,
+    * code runs analyses on the data, and
+    * code incorporates analyses into a report
+* Ideally, the process has a one-click build
+* Public sharing of document, code, and data is optional, but forms part of gold
+standard of scientific openness
+
+* Goes by many names, particularly "reproducible research", but I prefer "reproducible analysis".
+ 
+
+
+\tiny{
+See also: \url{http://stats.stackexchange.com/a/15006/183} 
+\url{https://github.com/jeromyanglim/rmarkdown-rmeetup-2012/issues/11}}
+
+## Aims of Reproducible
+
+* Ability to reproduce analysis
+* Increase accuracy
+    * Ability to verify analyses are consistent with intentions
+    * Ability to review analysis choices
+* Increase clarity of communication
+* Increased trustworthiness
+    * Increased accuracy +
+    * Ability for others to verify
+* Extensibility
+    * Ability to easily modify or re-use existing analyses
+
 # Markdown
 ## Overview of Markdown
 * Ultra simplified and intuitive set of markup
@@ -59,16 +90,43 @@
 
 
 # knitr and R Markdown
-
 ## Benefits of knitr
-## Benefits of Rstudio
-* Open source
-* Works on Linux, Mac, and Windows
-* 
+* knitr supports many markups: LaTeX, Markdown, HTML, reStructuredText
+* knitr has really nice defaults
+* Simplified figure production
+     * automatically print ggplot2 and lattice figures
+     * print figures by default
+     * permit interspersing of figures and console output
+* Greater extensibility: 
+    * output options
+    * supports languages other than R
+* Simplified caching
+* And more: <http://yihui.name/slides/2012-knitr-RStudio.html>
+
+## Rstudio
+* Benefits of Rstudio as IDE for R
+    * Open source
+    * Works on Linux, Mac, and Windows
+    * Many useful features
+    * It just works
+    * Tight integration with knitr 
+
+* But many other options
+    * Emacs with ESS
+    * Vim with R plugin
+    * Eclipse with StatET
+    * etc.
+
+## Rstudio screenshot
+\includegraphics[width=3in]{figures/rstudio-screenshot.png}
+
 
 ## R Code chunks
 
-## Installation
+Global options: 
+
+
+## Installation 
 * Install Rstudio
 * Install knitr `install.packages("knitr")`
 
@@ -78,6 +136,9 @@
 * `r I(2+2)`
 *     Markdown              `4`                  4
     HTML             <code>4</code>            4
+
+
+## Figures
 
 
 ## Tables
@@ -143,6 +204,16 @@ see `?markdownHTMLOptions` for more options. E.g.,
 
 # Conclusion
 ## Final thoughts
+## Links
+
+* knitr: <http://yihui.name/knitr/>
+* R Studio: <http://rstudio.org/>
+* R Markdown with R Studio: <http://rstudio.org/docs/authoring/using_markdown>
+
+* Places to ask questions
+    * R on StackOverflow: <http://stackoverflow.com/questions/tagged/r>
+    * LaTeX: <http://tex.stackexchange.com/>
+    * knitr: <https://github.com/yihui/knitr/issues>
 
 
 
