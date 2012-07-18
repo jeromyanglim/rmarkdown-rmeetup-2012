@@ -24,8 +24,6 @@ df <- data.frame(x, y)
 df
 ```
 
-
-
 ```
 ##     x    y
 ## 1   1 1.31

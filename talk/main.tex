@@ -7,6 +7,13 @@
 \institute{Melbourne Business School}
 \date{18th July 2012}
 
+% enables straight single quote
+\makeatletter
+\let \@sverbatim \@verbatim
+\def \@verbatim {\@sverbatim \verbatimplus}
+{\catcode`'=13 \gdef \verbatimplus{\catcode`'=13 \chardef '=13 }} 
+\makeatother
+
 % enables backticks in verbatim
 \makeatletter
 {\catcode`\`=13
@@ -18,9 +25,10 @@
 \begin{document}
 \begin{frame}
 \titlepage
-\begin{center}
-	\url{http://jeromyanglim.blogspot.com}
-\end{center}
+\begin{itemize}
+\item 	\url{http://jeromyanglim.blogspot.com}
+\item     \url{https://github.com/jeromyanglim/rmarkdown-rmeetup-2012}
+\end{itemize}
 \end{frame}
 
 \begin{frame}

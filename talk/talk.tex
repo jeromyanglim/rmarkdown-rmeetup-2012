@@ -1,33 +1,30 @@
 \section{Introduction}
 
-\begin{frame}\frametitle{Types of documents}
+\begin{frame}\frametitle{Motivation: How to create documents?}
 
 \begin{itemize}
 \item
-  Types
+  Types and distinctions
 
   \begin{itemize}
   \item
-    Journal articles, books, book chapters, theses
+    Formal Documents: Journal articles, books, book chapters, theses,
+    consulting reports, etc.
   \item
-    Preliminary analyses
+    Informal documents: preliminary analyses, statistical homework,
   \item
     Online content: web pages, blog posts, forum posts
   \item
-    Slide show presentations
-  \item
-    Consulting reports
+    Browser metaphor versus page/slide-based metaphor
   \end{itemize}
 \item
-  Key Distinctions
+  Context
 
   \begin{itemize}
   \item
-    online versus paper-based
+    When to use reproducible analysis?
   \item
-    document or presentation
-  \item
-    audience: formal versus informal (e.g., self, collaborators)
+    When to use knitr with R Markdown or LaTeX?
   \end{itemize}
 \end{itemize}
 
@@ -39,7 +36,7 @@
 \item
   Reproducibility varies on a continuum
 \item
-  I operationalise it as:
+  One particular form:
 
   \begin{itemize}
   \item
@@ -50,7 +47,7 @@
     code incorporates analyses into a report
   \end{itemize}
 \item
-  Ideally, the process has a one-click build
+  Ideally, the process involves a one-click build
 \item
   Public sharing of document, code, and data is optional, but forms part
   of gold standard of scientific openness
@@ -65,7 +62,7 @@ See also: \url{http://stats.stackexchange.com/a/15006/183}
 
 \end{frame}
 
-\begin{frame}\frametitle{Aims of Reproducible}
+\begin{frame}\frametitle{Aims of reproducible analysis}
 
 \begin{itemize}
 \item
@@ -101,22 +98,94 @@ See also: \url{http://stats.stackexchange.com/a/15006/183}
 
 \end{frame}
 
-\section{Markdown}
+\begin{frame}\frametitle{Reproducible analysis in R}
 
-\begin{frame}\frametitle{Overview of Markdown}
+\begin{block}{Typically:}
 
 \begin{itemize}
 \item
-  Ultra simplified and intuitive set of markup
+  Combine R and plain text file format to produce documents (e.g., pdfs,
+  HTML documents, etc.)
+\end{itemize}
+
+\end{block}
+
+\begin{block}{Popular Instances}
+
+\begin{itemize}
 \item
-  Limited set of markup
+  Sweave
 \item
-  HTML passed straight through
+  brew
 \item
-  Various extensions
+  knitr
+\end{itemize}
+
+\tiny{see also \url{http://cran.r-project.org/web/views/ReproducibleResearch.html}}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Installation of software used in this
+talk}
+
+\begin{itemize}
+\item
+  R: \url{http://www.r-project.org/}
+\item
+  R Studio: \url{http://rstudio.org/}
+\item
+  In R:
+
+  \begin{itemize}
+  \item
+    \texttt{install.packages("knitr)}
+  \item
+    \texttt{install.packages("markdown")}
+  \item
+    \texttt{install.packages("xtable")}
+  \item
+    \texttt{install.packages("ggplot2")}
+  \item
+    \texttt{install.packages("lattice")}
+  \end{itemize}
+\item
+  pandoc:
+
+  \begin{itemize}
+  \item
+    \url{http://johnmacfarlane.net/pandoc/}
+  \end{itemize}
+\item
+  LaTeX distribution:
+
+  \begin{itemize}
+  \item
+    E.g., TeXLive, MikTeX \url{http://www.latex-project.org/ftp.html}
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\section{Markdown}
+
+\begin{frame}\frametitle{What is markdown?}
+
+\begin{itemize}
+\item
+  Simple, readable, intuitive, light-weight markup
+\item
+  Convert to HTML
+\item
+  Raw HTML can be interspersed to add functionality
+\item
+  Various extensions and flaours of markdown
 \item
   Popular on websites: e.g., StackOverflow, GitHub, Reddit
 \end{itemize}
+
+\tiny{see also: \url{http://daringfireball.net/projects/markdown/ }}
 
 \end{frame}
 
@@ -147,6 +216,15 @@ See also: \url{http://stats.stackexchange.com/a/15006/183}
 \begin{frame}\frametitle{Equations}
 
 \includegraphics[width=4in]{figures/equations.png}
+
+\begin{itemize}
+\item
+  Uses MathJaX to render LaTeX (and other) equations
+\item
+  Inserts MathJaX script reference into HTML header
+\end{itemize}
+
+\tiny{getting started: \url{http://jeromyanglim.blogspot.com.au/2010/10/getting-started-with-writing.html}}
 
 \end{frame}
 
@@ -188,6 +266,22 @@ See also: \url{http://stats.stackexchange.com/a/15006/183}
 
 \section{knitr and R Markdown}
 
+\begin{frame}\frametitle{knitr, R Markdown, and R Studio}
+
+\begin{itemize}
+\item
+  knitr: R Package developed by Yihui Xie for weaving R (and other
+  languages) with various markup languages
+\item
+  R Markdown: A file format that combines R code chunks and markdown
+  text which is converted by knitr into markdown, and other formats
+  (e.g., HTML, pdf, etc.).
+\item
+  R Studio: Open source, cross-platform IDE for R.
+\end{itemize}
+
+\end{frame}
+
 \begin{frame}[fragile]\frametitle{Benefits of knitr}
 
 \begin{itemize}
@@ -195,6 +289,8 @@ See also: \url{http://stats.stackexchange.com/a/15006/183}
   knitr supports many markups: LaTeX, Markdown, HTML, reStructuredText
 \item
   knitr has really nice defaults
+\item
+  Tidy placement of generated files
 \item
   Simplified figure production
 
@@ -258,43 +354,102 @@ See also: \url{http://stats.stackexchange.com/a/15006/183}
 
 \end{frame}
 
+\begin{frame}\frametitle{RMarkdown Examples}
+
+\begin{itemize}
+\item
+  \emph{Introduction to R Markdown}
+\item
+  \emph{Statistics homework example}
+\item
+  \emph{Analysis of Winter Olympic Medals Example}
+\end{itemize}
+
+\end{frame}
+
 \begin{frame}\frametitle{Rstudio screenshot}
 
 \includegraphics[width=3in]{figures/rstudio-screenshot.png}
 
 \end{frame}
 
-\begin{frame}\frametitle{R Code chunks}
+\begin{frame}[fragile]\frametitle{R Code chunks}
 
-Global options:
+see http://yihui.name/knitr/options
+
+\begin{verbatim}
+```{r my_chunk_name, some_option='some_value'}
+some_r_code
+```
+\end{verbatim}
 
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Installation}
+\begin{frame}[fragile]\frametitle{R Code chunks options}
+
+\begin{block}{Global options:}
+
+\begin{verbatim}
+`r opts_chunk$set(opt = value)` # general form
+`r opts_chunk$set(cache=TRUE)` # e.g, global cache
+\end{verbatim}
+
+\end{block}
+
+\begin{block}{Some useful local options}
 
 \begin{itemize}
 \item
-  Install Rstudio
+  Hide console input: \texttt{echo=FALSE}
 \item
-  Install knitr \texttt{install.packages("knitr")}
+  Hide assorted messages:
+  \texttt{warning=FALSE, error=FALSE, message=FALSE}
+\item
+  Hide console output: \texttt{results="hide"}
+\item
+  Display console input as is: \texttt{tidy=FALSE}
+\item
+  Output raw markup: \texttt{results="asis"}
 \end{itemize}
+
+\end{block}
 
 \end{frame}
 
 \begin{frame}[fragile]\frametitle{Inline R Code}
 
-\begin{itemize}
-\item
-  \textbackslash{}texttt\{`r 2 + 2` becomes `4` which becomes 4.
-\item
-  \texttt{r I(2+2)}
-\item
-  Markdown \texttt{4} 4 HTML 4 4
-\end{itemize}
+\begin{verbatim}
+R Markdown     `r 2 + 2`       `r I(2+2)`
+Markdown           `4`             4
+HTML          <code>4</code>       4
+\end{verbatim}
 
 \end{frame}
 
-\begin{frame}\frametitle{Figures}
+\begin{frame}[fragile]\frametitle{Figures}
+
+\begin{itemize}
+\item
+  Support for multiple figures in a code block
+
+  \begin{itemize}
+  \item
+    also see e.g., \texttt{par(mfrow=c(2,2))} or \texttt{grid.arrange}
+  \end{itemize}
+\item
+  Figures and console output can be interspersed in a code chunk
+\item
+  Various code chunk options
+
+  \begin{itemize}
+  \item
+    see http://yihui.name/knitr/options
+  \item
+    \texttt{fig.width} and \texttt{fig.height}
+  \item
+    \texttt{dev} defaults to pdf for LaTeX and png for HTML/markdown
+  \end{itemize}
+\end{itemize}
 
 \end{frame}
 
@@ -319,6 +474,8 @@ Global options:
   For informal reports just use console output
 \item
   css can be added later to control table appearance
+\item
+  If you require sophisticated tables, you may want to switch to LaTeX
 \end{itemize}
 
 \end{frame}
@@ -334,10 +491,6 @@ print(xtable(my_data_frame, caption = "My Caption",
 \end{verbatim}
 
 \centerline{\includegraphics[height=1.5in]{figures/simple_table.png}}
-
-\end{frame}
-
-\begin{frame}\frametitle{Rstudio}
 
 \end{frame}
 
@@ -364,22 +517,29 @@ Basic workflow:
 
 \end{frame}
 
-\begin{frame}\frametitle{R package: \texttt{markdown}}
+\begin{frame}[fragile]\frametitle{R package: \texttt{markdown}}
 
 \begin{itemize}
 \item
-  Devloped by Jeffrey Horner
+  Maintained by Jeffrey Horner; Developed by devloped JJ Allaire,
+  Jeffrey Horner, Vicent Marti, and Natacha Porte
 \item
   R Package that creates more options for converting Markdown to HTML
+\item
+  \texttt{markdownToHTML("file.md", "file.html", options=c(...))}
+\item
+  The default options are
+  \texttt{"hard\_wrap", "use\_xhml", "smartypants", "base64\_images"}
 \end{itemize}
 
 \end{frame}
 
-\begin{frame}[fragile]\frametitle{Replicating R Studio}
+\begin{frame}[fragile]\frametitle{Replicating R Studio's
+\texttt{Knit to HTML}}
 
 \begin{verbatim}
-require(knitr) # required for knitting from rmd to md
-require(markdown) # required for md to html 
+require(knitr) # for knitting from rmd to md
+require(markdown) # for md to html 
 knit('test.rmd', 'test.md') # creates md 
 markdownToHTML('test.md', 'test.html') # create html
 browseURL(paste('file://', 
@@ -396,22 +556,102 @@ markdownToHTML('test.md', 'test.html',
 
 \end{frame}
 
-\section{LaTeX}
-
-\begin{frame}\frametitle{knitr with LaTeX}
+\begin{frame}[fragile]\frametitle{pandoc}
 
 \begin{itemize}
 \item
-  Sexpr
+  pandoc is a library and command-line tool for converting between many
+  document formats (e.g., HTML, markdown, pdf, LaTeX, docx; also
+  supports multiple plain text slide formats such as beamer)
 \item
-  Code chunk delimiters
+  Lots of options
+\item
+  Often requires thought in order to minimise conversion issues
 \end{itemize}
+
+\begin{block}{Example}
+
+\begin{verbatim}
+pandoc -s file.html -o file.pdf
+\end{verbatim}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{One-click build}
+
+\begin{itemize}
+\item
+  For simple documents, click \texttt{knit to HTML} in RStudio
+\item
+  For complex documents use a command-line option:
+
+  \begin{itemize}
+  \item
+    e.g., \texttt{makefile}, \texttt{Rscript}, etc.
+  \item
+    combine with \texttt{pandoc}, \texttt{knitr} options,
+    \texttt{markdown} options, text manipulation tools (e.g., sed, awk,
+    scripting languages) etc. to flexibly produce a varity of documents
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\section{LaTeX}
+
+\begin{frame}\frametitle{Example of LaTeX}
+
+\emph{If time permits, show example of knitr with LaTeX}
 
 \end{frame}
 
 \section{Conclusion}
 
 \begin{frame}\frametitle{Final thoughts}
+
+\begin{itemize}
+\item
+  knitr and R Markdown
+
+  \begin{itemize}
+  \item
+    It makes reproducible analysis as simple as one click
+  \item
+    Great tool for:
+
+    \begin{itemize}
+    \item
+      quick analyses for self and colleagues
+    \item
+      doing homework
+    \item
+      creating teaching resources
+    \item
+      blog posts, websites, etc.
+    \end{itemize}
+  \item
+    Scope to make more complex documents, but at a certain point it may
+    be worth exploring other tools
+  \end{itemize}
+\item
+  knitr and R LaTeX
+
+  \begin{itemize}
+  \item
+    Great for journal articles, theses, books (e.g., citations,
+    cross-references, printed works, equations)
+  \end{itemize}
+\item
+  As your needs get more complex
+
+  \begin{itemize}
+  \item
+    pandoc, makefiles, knitr options, markdown package options, scripts,
+    etc.
+  \end{itemize}
+\end{itemize}
 
 \end{frame}
 
@@ -426,17 +666,29 @@ markdownToHTML('test.md', 'test.html',
   R Markdown with R Studio:
   \url{http://rstudio.org/docs/authoring/using_markdown}
 \item
-  Places to ask questions
-
-  \begin{itemize}
-  \item
-    R on StackOverflow:
-    \url{http://stackoverflow.com/questions/tagged/r}
-  \item
-    LaTeX: \url{http://tex.stackexchange.com/}
-  \item
-    knitr: \url{https://github.com/yihui/knitr/issues}
-  \end{itemize}
+  My Posts
+  \url{http://jeromyanglim.blogspot.com.au/search/label/reproducible%20research}
 \end{itemize}
+
+\begin{block}{Places to ask questions}
+
+\begin{itemize}
+\item
+  R on StackOverflow: \url{http://stackoverflow.com/questions/tagged/r}
+\item
+  LaTeX: \url{http://tex.stackexchange.com/}
+\item
+  knitr: \url{https://github.com/yihui/knitr/issues}
+\end{itemize}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}\frametitle{Thank You}
+
+\begin{center}
+\LARGE{Questions?}
+\end{center}
 
 \end{frame}

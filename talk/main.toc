@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.10pt}
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Markdown}{6}{0}{2}
-\beamer@sectionintoc {3}{knitr and R Markdown}{18}{0}{3}
-\beamer@sectionintoc {4}{LaTeX}{31}{0}{4}
-\beamer@sectionintoc {5}{Conclusion}{32}{0}{5}
+\beamer@sectionintoc {2}{Markdown}{8}{0}{2}
+\beamer@sectionintoc {3}{knitr and R Markdown}{20}{0}{3}
+\beamer@sectionintoc {4}{LaTeX}{36}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{37}{0}{5}
