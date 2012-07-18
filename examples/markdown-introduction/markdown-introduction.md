@@ -87,6 +87,8 @@ Displayed code can be tab indented or four space indented:
     ```
 
 
+
+
 ### Quote
 Quotes by adding greater than to start of each line.
 
@@ -106,14 +108,10 @@ A   | B      |   C
 Or just write HTML:
 
 <table border="1">
-    <tr>
-    	<td>Cell A1</td>
-        <td>Cell B1</td>
-    </tr>
-    <tr>
-        <td>Cell A2</td>
-        <td>Cell B2</td>
-	</tr>
+    <tr><td>Cell A1</td>
+        <td>Cell B1</td></tr>
+    <tr><td>Cell A2</td>
+        <td>Cell B2</td></tr>
 </table>
 
 
@@ -121,6 +119,8 @@ Or just write HTML:
 ### HTML is passed through
 Hyperlink
 <a href="http://jeromyanglim.blogspot.com">My website</a>
+
+
 
 E.g., new line
 <hr />

@@ -116,7 +116,7 @@ print(xtable(Table), type = "html", include.rownames = FALSE)
 ```
 
 <!-- html table generated in R 2.15.1 by xtable 1.7-0 package -->
-<!-- Wed Jul 18 11:45:44 2012 -->
+<!-- Wed Jul 18 16:11:02 2012 -->
 <TABLE border=1>
 <TR> <TH> x </TH> <TH> p_x </TH> <TH> dbinom </TH>  </TR>
   <TR> <TD align="right"> 0.00 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 0.00 </TD> </TR>

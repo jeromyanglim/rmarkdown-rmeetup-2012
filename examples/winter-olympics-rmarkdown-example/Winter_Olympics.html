@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-<title>Overview</title>
+<title>Winter Olympics Medal Example</title>
 
 <base target="_blank"/>
 
@@ -184,66 +184,7 @@ hljs.initHighlightingOnLoad();
 </head>
 
 <body>
-<!-- Title: How to Convert Sweave LaTeX to knitr R Markdown: Winter Olympic Medals Example -->
-
-<p>The following post shows how to manually convert a Sweave LaTeX document into a knitr R Markdown document. The post (1) reviews many of the required changes; (2) provides an example of a document converted to R Markdown format based on an analysis of  Winter Olympic Medal data up to and including 2006; and (3) discusses the pros and cons of LaTeX and Markdown for performing analyses.</p>
-
-<!-- more -->
-
-<h1>Overview</h1>
-
-<p>The following analyses of Winter Olympic Medals data have gone through several iterations:</p>
-
-<ol>
-<li><strong>R Script</strong>: I originally performed <a href="http://jeromyanglim.blogspot.com.au/2010/02/analysis-of-winter-olympic-medal-data.html">similar analyses in February 2010</a>. It was a simple set of commands where you could see the console output and view the plots. </li>
-<li><strong>LaTeX Sweave</strong>: In February 2011 I adapted the example to make it a Sweave LaTex document. The <a href="https://github.com/jeromyanglim/Sweave_Winter_Olympics">source fo this is available on github</a>. With Sweave, I was able to create a document that weaved text, commands, console input, console output, and figures.</li>
-<li><strong>R Markdown</strong>: Now in June 2012 I&#39;m using the example to review the process of converting a document from Sweave-LaTeX to R Markdown. The <a href="https://github.com/jeromyanglim/Winter_Olympic_Medals_R_Markdown">souce code is available here on github</a> (see the <code>*.rmd</code> file). </li>
-</ol>
-
-<h1>Converting from Sweave to R Markdown</h1>
-
-<p>The following changes were required in order to convert my LaTeX Sweave document into an R Markdown document suitable for processing with <code>knitr</code> and <code>RStudio</code>. Many of these changes are fairly obvious if you understand LaTeX and Markdown; but a few are less obvious. And obviously there are many additional changes that might be required on other documents.</p>
-
-<h2>R code chunks</h2>
-
-<ul>
-<li><strong>R code chunk delimiters:</strong> Update  from  <code>&lt;&lt; ... &gt;&gt;=</code> and <code>@</code> to R markdown format <code>&#96;&#96;&#96;{r ...}</code> and  <code>&#96;&#96;&#96;</code></li>
-<li><strong>Inline code chunks:</strong> Update from <code>&#92;Sexpr{...}</code> to either <code>&#96;r ...&#96;</code> or <code>&#96;r I(...)&#96;</code> format.</li>
-<li><strong>results=tex</strong>: Any <code>results=tex</code> needs to either be removed or converted to <code>results=&#39;asis&#39;</code>. Note that string values of knitr options need to be quoted.</li>
-<li><strong>Boolean options</strong>: Sweave tolerates lower case <code>true</code> and <code>false</code> for code chunk options, <code>knitr</code> requires <code>TRUE</code> and <code>FALSE</code>.</li>
-</ul>
-
-<h2>Figures and Tables</h2>
-
-<ul>
-<li><strong>Floats</strong>: Remove figure and table floats (e.g., <code>\begin{table}...\end{table}</code>, <code>\begin{figure}...\end{figure}</code>). In R Markdown and HTML, there are no pages and thus content is just placed immediately in the document.</li>
-<li><strong>Figure captions</strong>: Extract content from within the <code>\caption{}</code> command. When using R Markdown, it is often easiest to add captions  to the plot itself (e.g., using the <code>main</code> argument in base graphics). </li>
-<li><strong>Table captions:</strong> extract content from within the <code>\caption{}</code> command; Table captions can be included in a <code>caption</code> argument using the <code>caption</code> argument to the <code>xtable</code> function (e.g., <code>print(xtable(MY_DAT_FRAME), &quot;html&quot;, caption=&quot;MY CAPTION&quot;, caption.placement=&quot;top&quot;)</code> ). Caption placement defaults to <code>&quot;bottom&quot;</code> of table but can be optinally specified as <code>&quot;top&quot;</code> either as a global option or in <code>print.xtable</code>. Alternatively table titles can just be included as Markdown text.</li>
-<li><strong>References:</strong> Delete table and figure lables (e.g., <code>\label{...}</code>). Replace table and figure references (e.g., <code>\ref{...}</code> with actual numbers or other descriptive terminology. It would also be possible to implement something simple in R that stored table and figure numbers (e.g., initialise table and figure numbers at the start of the document; increment table counter each time a table is created and likewise for figures; store the value of counter in variable; include variable in caption text using <code>paste()</code> or something similar. Include counter in text using inline R code chunks.</li>
-<li><strong>Table content</strong>: Markdown supports HTML; so one option is to convert LaTeX tables to HTML tables using a function like <code>print(xtable(MY_DATA_FRAME), type=&quot;html&quot;)</code>. This is combined with the <code>results=&#39;asis&#39;</code> R code chunk option.</li>
-</ul>
-
-<h2>Basic formatting</h2>
-
-<ul>
-<li><strong>Headings</strong>: if we assume <code>section</code> is the top level: then <code>\section{...}</code> becomes <code># ...</code>,  <code>\subsection{...}</code> becomes <code>## ...</code> and <code>\subsubsection{...}</code> becomes  <code>### ...</code></li>
-<li><strong>Mathematics</strong>: Update latex mathematics to <code>$</code><code>latex ...</code> and <code>$$</code><code>latex ... $$</code> notation if using RStudio.</li>
-<li><strong>Paragraph delimiters</strong>: If using RStudio then remove single line breaks that were not intended to be paragraph breaks.</li>
-<li><strong>Hyperlinks</strong>: Convert LaTeX Hyperlinks from <code>\href</code> or <code>url</code> to <code>[text](url)</code> format.</li>
-</ul>
-
-<h2>LaTeX things</h2>
-
-<ul>
-<li><strong>Comments</strong>: Remove any LaTeX comments or switch from <code>% comment</code> to <code>&lt;!-- comment --&gt;</code></li>
-<li><strong>LaTeX escaped characters</strong>: Remove unnecessary escape characters (e.g., <code>\%</code> is just <code>%</code>).</li>
-<li><strong>R Markdown escaped characters</strong>: Writing about the R Markdown language in R Markdown sometimes requires the use of HTML codes for special characters such as backticks (<code>&amp;#96;</code>) and backslashes (<code>&amp;#92;</code>) to prevent the text from being interpreted; see <a href="http://www.ascii.cl/htmlcodes.htm">here for a list of HTML character codes</a>.</li>
-<li><strong>Header</strong>: Remove the LaTeX header information up to and including <code>\begin{document}</code>; extract any incorporate any relevant content such as title, abstract, author, date, etc.</li>
-</ul>
-
-<h1>R Markdown Analysis of Winter Olympic Medal Data</h1>
-
-<p>The following shows the output of the actual analysis after running the rmd source through <code>Knit HTML</code> in Rstudio. If you&#39;re curious, you may wish to view the <a href="https://github.com/jeromyanglim/Winter_Olympic_Medals_R_Markdown/blob/master/Winter_Olympics.rmd">rmd source code on GitHub side by side this point at this point</a>.</p>
+<h1>Winter Olympics Medal Example</h1>
 
 <h2>Import Dataset</h2>
 
@@ -327,7 +268,7 @@ points(medalsByYearByGender[medalsByYearByGender$Event.gender ==
 
 <!-- html table generated in R 2.15.1 by xtable 1.7-0 package -->
 
-<!-- Wed Jul 18 11:36:58 2012 -->
+<!-- Wed Jul 18 16:14:36 2012 -->
 
 <TABLE align="center">
 <CAPTION ALIGN="top"> Proportion of Medals that were awarded to Females by Year </CAPTION>
@@ -380,7 +321,7 @@ colnames(cmm$table) &lt;- cmm$row1
 
 <!-- html table generated in R 2.15.1 by xtable 1.7-0 package -->
 
-<!-- Wed Jul 18 11:36:59 2012 -->
+<!-- Wed Jul 18 16:14:36 2012 -->
 
 <TABLE align="center">
 <CAPTION ALIGN="top"> Rankings of Medals Won by Country </CAPTION>
@@ -454,7 +395,7 @@ ausmedals$table &lt;- ausmedals$data
 
 <!-- html table generated in R 2.15.1 by xtable 1.7-0 package -->
 
-<!-- Wed Jul 18 11:36:59 2012 -->
+<!-- Wed Jul 18 16:14:36 2012 -->
 
 <TABLE align="center">
 <CAPTION ALIGN="top"> List of Australian Medals </CAPTION>
@@ -507,7 +448,7 @@ print(xtable(icetab$data,
 
 <!-- html table generated in R 2.15.1 by xtable 1.7-0 package -->
 
-<!-- Wed Jul 18 11:36:59 2012 -->
+<!-- Wed Jul 18 16:14:37 2012 -->
 
 <TABLE align="center">
 <CAPTION ALIGN="top"> Country Winning Gold and Silver Medals by Year in Mens Ice Hockey </CAPTION>
