@@ -1,2 +1,9 @@
 examples/article*   
 *cache*
+talk/main.nav
+talk/main.snm
+talk/main.vrb
+talk/main.aux
+talk/main.log
+talk/main.out
+talk/main.toc
