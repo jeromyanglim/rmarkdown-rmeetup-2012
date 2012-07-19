@@ -1,11 +1,16 @@
 # Overview of repository
-This repository includes the files used in 
+The video for this talk can be [viewed here on YouTube](http://youtu.be/XqzHnYLr5BE).
 
-* [YouTube Video of Talk](http://youtu.be/XqzHnYLr5BE)
+This repository includes the files related to the talk:
+
 * [PDF of Slides](https://github.com/jeromyanglim/rmarkdown-rmeetup-2012/blob/master/talk/main.pdf?raw=true)
-* See the `examples` directory for four R Markdown examples. 
+* See the [`examples`](https://github.com/jeromyanglim/rmarkdown-rmeetup-2012/tree/master/examples) directory for four R Markdown examples. 
 * While developing the presentation I tried to follow principles of open science by doing a lot of my thinking in a public way. This thinking is recorded using the github issue tracker. See the list of [issues here](https://github.com/jeromyanglim/rmarkdown-rmeetup-2012/issues?state=closed)
-* The talk itself was a beamer presentation. I used raw latex for the header `talk/main.tex` and markdown (see `talk.md`) for the body which was converted by pandoc into latex beamer (see `talk/makefile`).
+* The talk itself was a beamer presentation. I used raw latex for the header
+[`talk/main.tex`](https://github.com/jeromyanglim/rmarkdown-rmeetup-2012/blob/master/talk/main.tex) and markdown (see 
+[`talk.md`](https://github.com/jeromyanglim/rmarkdown-rmeetup-2012/blob/master/talk/talk.md) for the body which was converted
+by pandoc into latex beamer (see 
+[`talk/makefile`](https://github.com/jeromyanglim/rmarkdown-rmeetup-2012/blob/master/talk/makefile)).
 
 # Abstract of talk
 
