@@ -1,4 +1,3 @@
-
 # Introduction
 ## Motivation: How to create documents?
 * Types and distinctions
@@ -74,7 +73,7 @@ HTML documents, etc.)
 * Simple, readable, intuitive, light-weight markup
 * Convert to HTML
 * Raw HTML can be interspersed to add functionality
-* Various extensions and flaours of markdown
+* Various extensions and flavours of markdown
 * Popular on websites: e.g., StackOverflow, GitHub, Reddit
 
 \tiny{see also: \url{http://daringfireball.net/projects/markdown/ }}
